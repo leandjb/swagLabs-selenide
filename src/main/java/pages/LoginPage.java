@@ -11,12 +11,16 @@ public class LoginPage {
     private static final SelenideElement LOGIN_BTN = Selenide.$("#login-button");
     private static final SelenideElement ERROR_MSN = Selenide.$(Selectors.byAttribute("data-test","error"));
 
+    public HomePage loginToStandardUser(){
 
-    public HomePage loginToApplication(){
-        USERNAME_TXT.shouldBe(Condition.visible).setValue("ADMIN");     //Better use setValue() than sendkeys() method
-        PASSWORD_TXT.shouldBe(Condition.visible).setValue("PASS");
-        LOGIN_BTN.shouldBe(Condition.enabled).click();
+        USERNAME_TXT.shouldBe(Condition.visible)
+                .setValue("standard_user");     //Better use setValue() than sendkeys() method
+        PASSWORD_TXT.shouldBe(Condition.visible)
+                .setValue("secret_sauce");
+        LOGIN_BTN.shouldBe(Condition.enabled)
+                .click();
         ERROR_MSN.shouldNotBe(Condition.visible);
+
 
         return new HomePage();
     }
