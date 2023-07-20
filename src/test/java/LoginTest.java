@@ -6,10 +6,10 @@ import pages.LoginPage;
 
 
 
-class AddEmployeeTest {
+class LoginTest {
 
     @Test
-    void addEmployee() {
+    void testLoginWithValidCredential() {
 
         //Given
         String url = "https://www.saucedemo.com/v1/index.html";
@@ -27,8 +27,6 @@ class AddEmployeeTest {
 
         String currentTitle = WebDriverRunner.getWebDriver().getTitle();
         Assertions.assertEquals("Swag Labs", currentTitle, "El título de la página no es 'Swag Labs'");
-
-
 
     }
 }
