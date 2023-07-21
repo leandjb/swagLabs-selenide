@@ -16,7 +16,6 @@ public class LoginPage {
     }
 
     public HomePage loginToStandardUser(){
-
         USERNAME_TXT.shouldBe(Condition.visible)
                 .setValue("standard_user");     //Better use setValue() than sendkeys() method
         PASSWORD_TXT.shouldBe(Condition.visible)
