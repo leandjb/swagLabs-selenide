@@ -11,6 +11,10 @@ public class LoginPage {
     private static final SelenideElement LOGIN_BTN = Selenide.$("#login-button");
     private static final SelenideElement ERROR_MSN = Selenide.$(Selectors.byAttribute("data-test","error"));
 
+    public static LoginPage getInstance(){
+        return new LoginPage();
+    }
+
     public HomePage loginToStandardUser(){
 
         USERNAME_TXT.shouldBe(Condition.visible)
@@ -20,7 +24,6 @@ public class LoginPage {
         LOGIN_BTN.shouldBe(Condition.enabled)
                 .click();
         ERROR_MSN.shouldNotBe(Condition.visible);
-
 
         return new HomePage();
     }

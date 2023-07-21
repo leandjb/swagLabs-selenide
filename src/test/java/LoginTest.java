@@ -17,7 +17,7 @@ class LoginTest {
         Selenide.open(url);
 
         //When
-        new LoginPage()
+        LoginPage.getInstance()
                 .loginToStandardUser()
                 .getHomeLeftMenuComponent()
                 .selectLeftMenuButton();
