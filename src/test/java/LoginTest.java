@@ -1,4 +1,3 @@
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.WebDriverRunner;
 import org.junit.jupiter.api.Assertions;
@@ -18,7 +17,7 @@ class LoginTest {
 
         //When
         LoginPage.getInstance()
-                .loginToStandardUser()
+                .loginWithStandardUser()
                 .getHomeLeftMenuComponent()
                 .selectLeftMenuButton();
 
