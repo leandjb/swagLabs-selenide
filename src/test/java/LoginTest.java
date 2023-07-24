@@ -8,6 +8,7 @@ import pages.LoginPage;
 
 class LoginTest {
 
+
     @Test
     void testLoginWithValidCredential() {
 
@@ -27,6 +28,5 @@ class LoginTest {
 
         String currentTitle = WebDriverRunner.getWebDriver().getTitle();
         Assertions.assertEquals("Swag Labs", currentTitle, "El título de la página no es 'Swag Labs'");
-
     }
 }
