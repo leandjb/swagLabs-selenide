@@ -37,6 +37,20 @@
             <scope>test</scope>
         </dependency>
 
+        <!-- https://mavenlibs.com/maven/dependency/org.testng/testng -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>7.8.0</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- https://mavenlibs.com/maven/dependency/com.codeborne/selenide-testng -->
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>selenide-testng</artifactId>
+            <version>6.17.0</version>
+        </dependency>
 
 
     </dependencies>
